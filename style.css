@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background: white;
+  color: black;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.restart-btn {
+  display: none;
+  background: #f4f4f4;
+  color: #333333;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.restart-btn:hover {
+  background: lightgray;
+}
+
+.header {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.header h1 {
+  margin-bottom: 1rem;
+}
+
+.score {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* repeat of 2 even columns */
+  font-size: 1.2rem;
+  color: white;
+}
+
+.score p {
+  background: lightslategray;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 6rem;
+}
+
+.choice {
+  cursor: pointer;
+}
+
+.choice:hover {
+  color: lightgrey;
+}
+
+.text-win {
+  color: green;
+}
+
+.text-lose {
+  color: red;
+}
+
+
+/* Popup CSS */
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background: white;
+  text-align: center;
+  margin: 10% auto;
+  width: 350px;
+  border-radius: 10px;
+  padding: 3rem;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: popupopen;
+  animation-duration: 1s;
+}
+
+.popup-content h1 {
+  margin-bottom: 20px;
+}
+
+.popup-content p {
+  font-size: 1.2 rem;
+  margin-top: 15px;
+}
+
+@keyframes popupopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
